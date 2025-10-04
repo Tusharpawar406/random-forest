@@ -1,17 +1,19 @@
-# Titanic Survival Prediction: Logistic Regression vs Random Forest
+# Titanic Survival Prediction using Random Forest
 
-This project compares **Logistic Regression** and **Random Forest** models to predict Titanic passenger survival.
+This project predicts whether a passenger survived the Titanic disaster using a **Random Forest Classifier**.
 
+---
 
 ## Dataset
 Dataset: [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic)  
 File used: `train.csv`
 
+---
 
 ## Objective
-Build two classification models and compare their performance on predicting passenger survival.
+Build a classification model to predict passenger survival and identify the most important features influencing survival.
 
-
+---
 
 ## Steps Involved
 1. **Data Preprocessing**
@@ -20,20 +22,22 @@ Build two classification models and compare their performance on predicting pass
 2. **Exploratory Data Analysis (EDA)**
    - Visualized feature distributions and correlations
 3. **Model Training**
-   - Trained Logistic Regression (`max_iter=500`)
-   - Trained Random Forest (`n_estimators=500`)
+   - Trained a Random Forest Classifier (`n_estimators=500`)
 4. **Evaluation**
-   - Compared accuracy, precision, recall, and F1-score
-   - Visualized Random Forest feature importance
+   - Measured accuracy, confusion matrix, precision, recall, and F1-score
+   - Plotted feature importance
 
-
+---
 
 ## Results
-- Logistic Regression Accuracy: ~80–82%  
-- Random Forest Accuracy: ~85–88%  
-- Top features influencing survival: `Sex`, `Pclass`, `Fare`, `Age`
+- Accuracy: ~85–88%  
+- Most important features for survival:
+  - `Sex` (female passengers more likely to survive)
+  - `Pclass` (higher class increased survival chance)
+  - `Fare` (higher fare associated with higher survival)
+  - `Age` (younger passengers more likely to survive)
 
-
+---
 
 ## Libraries Used
 - pandas  
@@ -42,7 +46,8 @@ Build two classification models and compare their performance on predicting pass
 - seaborn  
 - scikit-learn  
 
-
+---
 
 ## Conclusion
-Random Forest outperformed Logistic Regression on the Titanic dataset, capturing nonlinear patterns and interactions between features. Both models indicate that **gender, class, and fare** were the most important factors affecting survival.
+Random Forest effectively predicts passenger survival and captures nonlinear relationships between features. Feature importance highlights key factors influencing survival, making the model both accurate and interpretable.
+
